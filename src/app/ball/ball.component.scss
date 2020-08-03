@@ -1,0 +1,93 @@
+:host-context(.ball-selector-item) div {
+  width: 50px;
+  height: 50px;
+  margin: 0.3rem;
+  transition: all 0.2s ease-in;
+  border: 2px solid #76efe5;
+  background: radial-gradient(
+    circle at 50% 120%,
+    #81f6e6,
+    #66ccc3 10%,
+    #05948d 80%,
+    #09585e 100%
+  );
+
+  @media (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    span {
+      font-size: 0.9rem;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+    border: 2px solid #4488d6;
+    background: radial-gradient(
+      circle at 50% 120%,
+      #81bdf6,
+      #76bfef 10%,
+      #054894 80%,
+      #062145 100%
+    );
+  }
+
+  &:hover {
+    color: white;
+
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &.disabled {
+    background: #aaa;
+    border-color: #fa89fa;
+    cursor: default;
+
+    &:hover {
+      background: #aaa;
+      cursor: default;
+    }
+  }
+}
+div {
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  font-family: "Droid Serif";
+  font-weight: bold;
+
+  &.disabled {
+    cursor: default;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    z-index: 3;
+    font-size: 1.2rem;
+  }
+}

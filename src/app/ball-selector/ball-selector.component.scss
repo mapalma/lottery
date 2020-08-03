@@ -1,0 +1,22 @@
+h2 {
+  text-align: center;
+  font-family: "Fredoka One";
+  color: #e7b52b;
+  text-shadow: 2px 2px 0 #9b7b24;
+}
+
+.ball-selector {
+  padding: 1.5rem;
+  display: flex;
+
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    width: 225px;
+  }
+}

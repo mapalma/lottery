@@ -1,0 +1,2 @@
+<div class="ball" (click)="ball.chosenBall ? $event.stopPropagation() : onBallClicked(ball.ballNumber)"
+    [ngClass]="{disabled: ball.chosenBall}"> <span>{{ball.ballNumber}}</span></div>

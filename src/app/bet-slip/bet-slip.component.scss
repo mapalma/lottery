@@ -1,0 +1,245 @@
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  font-family: "Fredoka One";
+  color: #e7b52b;
+  text-shadow: 2px 2px 0 #9b7b24;
+}
+
+.container {
+  padding: 0;
+}
+
+.bet-slip {
+  display: flex;
+  height: 75px;
+  padding: 1.2rem 0;
+  margin: 1.5rem auto;
+  width: 315px;
+
+  @media (max-width: 1200px) {
+    width: 160px;
+    margin: 1.5rem auto;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .container {
+    text-align: center;
+  }
+}
+
+.bet-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  padding: 1.5rem 0;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    padding: 1.5rem 0;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    border-top: 1px solid rgba(#333, 0.1);
+  }
+  &:after {
+    top: 1px;
+    border-top: 1px solid rgba(#fff, 0.1);
+  }
+
+  label {
+    margin: 0 0.5rem 0 0;
+    color: #fff;
+  }
+
+  .form-control {
+    border-radius: 0.25rem 0 0 0.25rem;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: rgba(#fff, 0.3);
+    border-color: rgba(#fff, 0.3);
+    outline: none !important;
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none;
+    }
+  }
+
+  .btn {
+    border-radius: 0 0.25rem 0.25rem 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    position: relative;
+
+    background: rgb(65, 108, 175);
+    background: linear-gradient(
+      0deg,
+      #416caf 0%,
+      #1666cb 15%,
+      #093c78 75%,
+      #023a63 100%
+    );
+    border-color: #1666cb;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background: rgb(148, 122, 5);
+      background: linear-gradient(
+        0deg,
+        rgba(148, 122, 5, 1) 0%,
+        rgba(179, 167, 47, 1) 15%,
+        rgba(148, 122, 5, 1) 75%,
+        rgba(69, 58, 6, 1) 100%
+      );
+      border-color: #88741a;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:after {
+      content: "OK";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      border-color: #88741a;
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: none !important;
+      box-shadow: none;
+    }
+  }
+}
+
+.helper {
+  span {
+    display: block;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+}
+
+.bet-resume {
+  text-align: center;
+  position: relative;
+  padding: 1.5rem 0;
+
+  &:before,
+  &:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    border-top: 1px solid rgba(#333, 0.1);
+  }
+  &:after {
+    top: 1px;
+    border-top: 1px solid rgba(#fff, 0.1);
+  }
+
+  .bet-total-amount {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .btn {
+    width: 100%;
+    font-family: "Fredoka One";
+    background: rgb(65, 108, 175);
+    background: linear-gradient(
+      0deg,
+      #416caf 0%,
+      #1666cb 15%,
+      #093c78 75%,
+      #023a63 100%
+    );
+    border-color: #1666cb;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0 0.25rem 0.25rem 0;
+      background: rgb(148, 122, 5);
+      background: linear-gradient(
+        0deg,
+        rgba(148, 122, 5, 1) 0%,
+        rgba(179, 167, 47, 1) 15%,
+        rgba(148, 122, 5, 1) 75%,
+        rgba(69, 58, 6, 1) 100%
+      );
+      border-color: #88741a;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:after {
+      content: "Place Bet";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+      border-color: #88741a;
+      &:before,
+      &:after {
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.container {
+  padding: 3rem;
+  @media (min-width: 768px) {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    color: #e7b52b;
+    background: -webkit-linear-gradient(
+      #e7b52b,
+      #da870b,
+      #f5db69,
+      #da870b,
+      #e7b52b
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-family: "Fredoka One";
+    filter: drop-shadow(2px 2px 3px #f0f);
+
+    @media (min-width: 768px) {
+      font-size: 5rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+
+  .ball-selector-container,
+  .bet-slip-container {
+    padding: 1.5rem;
+
+    @media (min-width: 768px) {
+      min-height: 470px;
+    }
+  }
+
+  .ball-selector-container {
+    background-color: #c8cbd8;
+  }
+
+  .bet-slip-container {
+    background-color: #535870;
+  }
+}

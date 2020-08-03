@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>Bet Slip</h2>
+  <div class="bet-slip">
+    <app-display-ball class="bet-slip-item" *ngFor="let ball of selectedBalls" [ball]="ball"></app-display-ball>
+  </div>
+
+  <form [formGroup]='betForm' (ngSubmit)="onSubmit()">
+    <div class="form-group bet-input">
+      <label for="amount" class="hidden">{{selectedBalls.length}}x:</label>
+      <input type="number" class="form-control" id="amount" formControlName="amount">
+
+      <button type="button" class="btn btn-primary" (click)="checkBet()"
+        [disabled]="selectedBalls.length == 0 || betForm.controls.amount.errors">OK</button>
+    </div>
+    <div class="helper">
+      <span class="alert alert-danger" *ngIf="betForm.controls.amount.errors?.required">Amount is required</span>
+      <span class="alert alert-danger" *ngIf="betForm.controls.amount.errors?.min">Amount should be bigger than 5</span>
+    </div>
+
+    <div class="bet-resume" *ngIf="isBetResumed && !isBetPlaced">
+      <div class="bet-total-amount">
+        <p><strong>Total:</strong> {{totalAmount}} &euro;</p>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="betForm.controls.amount.errors">Place Bet</button>
+    </div>
+
+
+  </form>
+
+</div>
